@@ -1,0 +1,27 @@
+.cursor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  z-index: 100;
+  opacity: 0;
+  width: 2vh;
+  height: 2vh;
+  background-color: blanchedalmond;
+}
+.cursor-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: exclusion;
+  z-index: 99;
+  width: 4vh;
+  height: 4vh;
+  background-color: whitesmoke;
+}

@@ -1,0 +1,29 @@
+@cursor-size: 2vh;
+@cursor-container-size: 4vh;
+
+.cursor-shared() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: exclusion;
+}
+
+.cursor {
+    .cursor-shared;
+    z-index: 100;
+    opacity: 0;
+    width: @cursor-size;
+    height: @cursor-size;
+    background-color: blanchedalmond;
+}
+
+.cursor-dot {
+    .cursor-shared;
+    z-index: 99;
+    width: @cursor-container-size;
+    height: @cursor-container-size;
+    background-color: whitesmoke;
+}

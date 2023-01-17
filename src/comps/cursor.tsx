@@ -15,13 +15,15 @@ function AnimatedCursor() {
         return () => {
             cancelAnimationFrame(requestRef.current)
         }
+        // eslint-disable-next-line
     }, [])
+    /*animate() only runs once intentionally */
 
     useEventListener('mousemove', onMouseMove)
 
     function onMouseMove(ev: MouseEvent) {
-        cursorPos.current.x = ev.clientX
-        cursorPos.current.y = ev.clientY
+        cursorPos.current.x = ev.pageX
+        cursorPos.current.y = ev.pageY
         cursor.current.style.top = `${cursorPos.current.y}px`
         cursor.current.style.left = `${cursorPos.current.x}px`
     }
